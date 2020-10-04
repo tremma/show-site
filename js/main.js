@@ -4,14 +4,10 @@ $(document).ready(function () {
       $('.header__burger,.header .menu').toggleClass('active');
       $('body').toggleClass('lock');
    });
-
    //scroll-to-top
    const scrollSize = 100;
    const scrollUp = document.querySelector('.scroll-to-top');
-
    const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
-
-
    window.addEventListener('scroll', () => {
       if (getTop() > scrollSize) {
          scrollUp.classList.add('show');
@@ -19,7 +15,6 @@ $(document).ready(function () {
          scrollUp.classList.remove('show');
       }
    });
-
    scrollUp.addEventListener('click', () => {
       window.scrollTo({
          top: 0,
@@ -67,11 +62,7 @@ $(document).ready(function () {
       setTimeout(() => {
          animOnScroll();
       }, 300);
-
    }
-
-
-   $(document).ready(function () {
       $('.reviews__slider').slick({
          dots: true,
          arrows: false,
@@ -88,7 +79,6 @@ $(document).ready(function () {
                }
             }]
       });
-   });
 
    // calc
 
@@ -99,12 +89,8 @@ $(document).ready(function () {
       checkbox = document.getElementById('checkbox'),
       radioSum = +1500,
       selectSum = +1000;
-
-
-
    for (var i = 0; i < radio.length; i++) {
       radio[i].addEventListener("click", function () {
-
          if (this.value == "day-14") {
             radioSum = 2500;
          }
@@ -117,12 +103,10 @@ $(document).ready(function () {
          result.innerHTML = radioSum + selectSum + "руб.";
       });
    }
-
    select.addEventListener('change', function () {
       selectSum = +this.value;
       result.innerHTML = radioSum + selectSum + "руб.";
    });
-
    checkbox.addEventListener('change', function () {
       if (this.checked) {
          checkboxSum = +20;
@@ -131,20 +115,7 @@ $(document).ready(function () {
       else {
          result.innerHTML = radioSum + selectSum + "руб.";
       }
-
    });
-
    result.innerHTML = radioSum + selectSum + "руб.";
-
-
-
-
-
-
-
-
-
-
-
 })
 
